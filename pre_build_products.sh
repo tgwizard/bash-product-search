@@ -15,7 +15,8 @@ echo "done!"
 
 echo -n "Adding store info... "
 
-head -n 20000 data/shops.csv |
+# This will take quite a while. Tail `tmp/products` to see progress.
+cat data/shops.csv |
 tail -n+2 |
 awk -F ',' '{ printf "s/ %s / %s %s %s /g\n", $1, $1, $(NF-1), substr($NF, 1, length($NF)-1)}' > tmp/add_shop_info_cmds
 

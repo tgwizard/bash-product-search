@@ -15,14 +15,6 @@ The one preinstalled on Mac OS X is not good enough.
 brew install netcat
 ```
 
-## Preprocess data
-
-This will take quite a while. Tail `tmp/products` to see progress.
-
-```
-./pre_build_products.sh
-```
-
 
 ## Run
 
